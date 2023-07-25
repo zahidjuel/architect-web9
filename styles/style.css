@@ -1,0 +1,256 @@
+/* common css style */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700;800&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    border: 2px solid blueviolet;
+}
+
+.text-title {
+    color: #131313;
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.text-description {
+    margin: 10px 0;
+    color: #727272;
+    line-height: 26px;
+}
+
+.primary-btn {
+    outline: 0;
+    border: 0;
+    color: #fff;
+    background: #FF900E;
+    border-radius: 8px;
+    padding: 14px 18px;
+    font-size: 20px;
+    margin: 15px 0px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.gray-color {
+    color: #727272;
+}
+
+.orange {
+    color: #FF900E;
+}
+
+/* header section style */
+#home {
+    /* height: 100vh; */
+    padding: 35px 0px;
+    background-color: rgba(255, 144, 14, 0.10);
+    border: 1px solid red
+}
+
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid yellowgreen;
+}
+
+.navigation {
+    display: flex;
+}
+
+.navigation li {
+    list-style-type: none;
+    margin: 10px;
+    border: 1px solid blueviolet;
+}
+
+.navigation li a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 16px;
+    /* text-align: center; */
+    color: #424242;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* banner styles */
+.banner-top {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 80px 0 30px;
+    text-align: center;
+    border: 1px solid red;
+}
+
+.banner-title {
+    font-size: 60px;
+    color: #131313;
+    font-weight: 700;
+}
+
+.banner-bottom img {
+    width: 100%;
+    height: auto;
+}
+
+/* feature section style */
+.feature-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 80px 0px;
+    border: 2px solid black;
+}
+
+.feature-photo {
+    width: 52%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.feature-description {
+    width: 38%;
+    border: 2px solid yellow;
+}
+
+.feature-photo img {
+    width: 100%;
+    height: 90%;
+}
+
+/* feature-content */
+.feature-content {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid red;
+}
+
+.content-left {
+    width: 40%;
+}
+
+.content-left-title {
+    border-left: 5px solid #FF900E;
+    padding-left: 20px;
+}
+
+.card {
+    padding: 30px;
+    margin: 25px 0px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.text-heading {
+    color: #131313;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.content-right {
+    width: 50%;
+    border: 1px solid olive;
+}
+
+.content-right img {
+    width: 100%;
+    height: 95%;
+}
+
+/* badge css */
+.badge {
+    text-align: center;
+    padding: 35px;
+    display: inline-block;
+    color: #fff;
+    background-color: #FF900E;
+    border-radius: 8px;
+    position: relative;
+    bottom: 100px;
+    right: 100px;
+}
+
+.badge h2 {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.badge p {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+/* facts styles */
+.facts{
+    margin: 100px 0px;
+}
+
+.number-color {
+    color: #424242;
+    font-weight: 600;
+}
+
+.facts-container {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(4, 280px);
+    justify-content: space-around;
+    margin: 60px 0px;
+}
+
+.fact-box {
+    padding: 50px;
+    border: 1px solid #FF900E;
+    border-radius: 8px;
+}
+
+.fact-box h3 {
+    margin: 10px;
+}
+
+/* sponsor style */
+
+.sponsor{
+    margin: 150px 0px;
+}
+.sponsor-description{
+    text-align: center;
+}
+
+.sponsor-photo{
+    display: grid;
+    grid-template-columns: repeat(5, 160px);
+    justify-content: space-between;
+    margin: 60px 0px;
+    filter: grayscale(100%);
+}
+
+.sponsor-photo img{
+    width: 100%;
+    height: auto;
+}
+
+/* footer styles */
+footer{
+    text-align: center;
+    background-color: #fff4e9;
+    padding: 40px 0px;
+    margin-top: 80px;
+}
