@@ -18,12 +18,11 @@ body {
 .container {
     max-width: 1240px;
     margin: 0 auto;
-    border: 2px solid blueviolet;
 }
 
 .text-title {
     color: #131313;
-    font-size: 45px;
+    font-size: 3vw;
     font-weight: 700;
 }
 
@@ -59,14 +58,12 @@ body {
     /* height: 100vh; */
     padding: 35px 0px;
     background-color: rgba(255, 144, 14, 0.10);
-    border: 1px solid red
 }
 
 .d-flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid yellowgreen;
 }
 
 .navigation {
@@ -76,7 +73,6 @@ body {
 .navigation li {
     list-style-type: none;
     margin: 10px;
-    border: 1px solid blueviolet;
 }
 
 .navigation li a {
@@ -95,7 +91,6 @@ body {
     margin: 0 auto;
     padding: 80px 0 30px;
     text-align: center;
-    border: 1px solid red;
 }
 
 .banner-title {
@@ -115,7 +110,6 @@ body {
     justify-content: space-around;
     align-items: center;
     margin: 80px 0px;
-    border: 2px solid black;
 }
 
 .feature-photo {
@@ -127,7 +121,6 @@ body {
 
 .feature-description {
     width: 38%;
-    border: 2px solid yellow;
 }
 
 .feature-photo img {
@@ -139,7 +132,6 @@ body {
 .feature-content {
     display: flex;
     justify-content: space-between;
-    border: 2px solid red;
 }
 
 .content-left {
@@ -166,7 +158,6 @@ body {
 
 .content-right {
     width: 50%;
-    border: 1px solid olive;
 }
 
 .content-right img {
@@ -198,7 +189,7 @@ body {
 }
 
 /* facts styles */
-.facts{
+.facts {
     margin: 100px 0px;
 }
 
@@ -210,7 +201,8 @@ body {
 .facts-container {
     text-align: center;
     display: grid;
-    grid-template-columns: repeat(4, 280px);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
     justify-content: space-around;
     margin: 60px 0px;
 }
@@ -226,31 +218,132 @@ body {
 }
 
 /* sponsor style */
-
-.sponsor{
+.sponsor {
     margin: 150px 0px;
 }
-.sponsor-description{
+
+.sponsor-description {
     text-align: center;
 }
 
-.sponsor-photo{
+.sponsor-photo {
     display: grid;
-    grid-template-columns: repeat(5, 160px);
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
     justify-content: space-between;
     margin: 60px 0px;
     filter: grayscale(100%);
 }
 
-.sponsor-photo img{
-    width: 100%;
+.sponsor-photo img {
+    width: 80%;
     height: auto;
 }
 
 /* footer styles */
-footer{
+footer {
     text-align: center;
     background-color: #fff4e9;
     padding: 40px 0px;
     margin-top: 80px;
+}
+
+/* nav-toggler */
+#nav-toggler {
+    display: none;
+}
+
+.nav-toggler-icon {
+    display: none;
+    font-size: 30px;
+}
+
+/* responsive section */
+
+/* medium device */
+@media only screen and (max-width: 992px) {
+
+    .nav-toggler-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    .navigation {
+        position: absolute;
+        left: 0px;
+        top: 60px;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: transparent;
+        padding: 20px 0px;
+        transform: translateY(-600px);
+        transition: .5s ease-out;
+    }
+
+    .navigation li a {
+        color: #121212;
+        padding: 0px;
+    }
+
+    #nav-toggler:checked~.navigation {
+        transform: translate(0px);
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .banner-title{
+        font-size: 45px;
+    }
+    .feature-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .feature-photo {
+        width: 100%;
+    }
+
+    .feature-description {
+        width: 100%;
+    }
+
+    .feature-content {
+        flex-direction: column;
+    }
+
+    .content-left {
+        width: 100%;
+        text-align: center;
+    }
+
+    .content-right {
+        width: 100%;
+    }
+
+    .facts-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sponsor-photo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sponsor-photo img {
+        width: 60%;
+    }
+
+    .facts {
+        margin: 0px;
+    }
+
+    .sponsor {
+        margin: 0px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .banner-title{
+        font-size: 35px;
+    }
 }
